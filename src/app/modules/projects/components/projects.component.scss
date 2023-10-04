@@ -1,0 +1,15 @@
+.projects-container {
+  padding: 3% 6%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  
+  &__list {
+    flex-basis: 37%;
+  }
+
+  &__info {
+    flex-basis: 60%;
+  }
+}

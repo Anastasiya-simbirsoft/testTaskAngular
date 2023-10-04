@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Данные
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="form" (ngSubmit)="submitForm()" class="data-container">
+    <div>
+      <ion-label>Введите JSON:</ion-label>
+      <ion-textarea formControlName="dataJSON" fill="outline" class="data-container__textarea">
+      </ion-textarea>
+    </div>
+    <ion-button type="submit" color="medium" expand="full" [disabled]="form.invalid" class="data-container__button-submit">Сохранить</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,38 @@
+<form [formGroup]="form" *ngIf="project" (ngSubmit)="submitForm()" class="info-projects">
+  <div class="info-projects__title">{{project.subject}}</div>
+  <div class="info-projects__row">
+    
+    <div>
+      <ion-label position="stacked" class="info-projects__lable">Дата начала</ion-label>
+      <app-date-control formControlName="startDate"></app-date-control>
+    </div>
+    <div>
+      <ion-label position="stacked" class="info-projects__lable">Дата окончания</ion-label>
+      <app-date-control formControlName="endDate"></app-date-control>
+    </div>
+    <div class="info-projects__row__author">
+      <ion-label position="stacked" class="info-projects__lable">Автор</ion-label>
+      <ion-input formControlName="createdBy"></ion-input>
+    </div>
+  </div>
+    <div>
+      <ion-label position="stacked" class="info-projects__lable">Описание</ion-label>
+      <ion-input formControlName="description" ></ion-input>
+    </div>
+  <div class="info-projects__flex-center">  
+    <ion-button type="submit" color="medium" expand="full" [disabled]="form.pristine" class="info-projects__button-submit">Изменить</ion-button>
+  </div>
+    
+      <!-- <ion-datetime-button datetime="datetime" class="info-projects__display_none"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true" [isOpen]="showCalendar" (didDismiss)="cancelCalendar()">
+        <ng-template>
+          <ion-datetime
+            id="datetime"
+            presentation="date"
+            formControlName="startDate" 
+          >
+        </ion-datetime> 
+          
+        </ng-template>
+      </ion-modal> -->
+  </form>
